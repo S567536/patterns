@@ -1,9 +1,9 @@
-#FROM maven:3.8.2-jdk-11 AS build
+#FROM maven:3-eclipse-temurin-17 AS build
 #COPY . .
 #RUN mvn clean package -Pprod -DskipTests
 #FROM openjdk:11-jdk-slim   FROM maven:3-eclipse-temurin-17 AS build
 
-FROM maven:3.8.2-jdk-11 AS build
+FROM maven:17-jdk-11 AS build
 COPY . .
 RUN mvn clean package -Pprod -DskipTests
 FROM openjdk:11-jdk-slim
